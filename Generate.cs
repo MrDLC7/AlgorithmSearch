@@ -38,10 +38,11 @@ namespace AlgorithmSearch
 
                 hash = (Convert.ToInt64(numbers[i].value) % 10204).GetHashCode().ToString();
                 numbers[i].hash = hash;
-                long n = (Convert.ToInt64(hash) % size);
-                if (numbers[Convert.ToInt64(hash) % size].key == -1)
+                int n = (int)(Convert.ToInt64(hash) % size);
+                if (numbers[n].key == -1)
                 {
-                    numbers[Convert.ToInt64(hash) % size].key = Convert.ToInt64(hash) % size;
+                    numbers[n].key = n;
+                    numbers[n].index = n;
                 }
                 else
                 {

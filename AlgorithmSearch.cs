@@ -29,15 +29,16 @@ namespace AlgorithmSearch
             public string value;
             public string hash;
         }
+        Numbers[] numbers;
 
         private void button_Generate_Visible_List_Click(object sender, EventArgs e)
         {
             int size_list = Convert.ToInt32(textBox_NumsCount.Text);
-            Numbers[] numbers = new Numbers[size_list];
+            numbers = new Numbers[size_list];
 
             Generate generate = new Generate(numbers, size_list);
             richTextBox_List.Text = Print.InfoList(numbers);
-            richTextBox_Log.Text = Print.InfoLog("Формування списку", "Час", generate._Time.ToString());
+            richTextBox_Log.Text = Print.InfoLog("Формування списку", "Час", generate._Time, "мк");
         }
 
         private void textBox_SellectAll_Click(object sender, EventArgs e)

@@ -51,10 +51,6 @@ namespace AlgorithmSearch
                 i++;
             }
             stopwatch.Stop();
-
-
-            _Time = stopwatch.ElapsedTicks / (Stopwatch.Frequency / (1000L * 1000L));
-            
         }
 
         private string NumToString(int num)

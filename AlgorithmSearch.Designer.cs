@@ -30,41 +30,118 @@
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(AlgorithmSearch));
             panelMain = new Panel();
+            button_ok_FindNumber_BinarySearch = new Button();
+            lbl_find_Binary = new Label();
+            textBox_FindNumber_BinarySearch = new TextBox();
+            button_ok_FindNumber_LinearSearch = new Button();
+            lbl_find_Linear = new Label();
+            textBox_FindNumber_LinearSearch = new TextBox();
             textBox_NumsCount = new TextBox();
             lbl_log = new Label();
             lbl_list = new Label();
             richTextBox_Log = new RichTextBox();
-            btn_ok_Key = new Button();
-            lbl_key = new Label();
-            textBox_Key = new TextBox();
+            button_ok_KeyFind_HashTableSearch = new Button();
+            lbl_keyFind_HashTableSearch = new Label();
+            textBox_KeyFind_HashTableSearch = new TextBox();
             btn_Generate_Visible_List = new Button();
             button_HashTableSearch = new Button();
             lbl_numsCount = new Label();
             button_BinarySearch = new Button();
             button_LineSearch = new Button();
             richTextBox_List = new RichTextBox();
+            panel_List = new Panel();
+            panel_Linear = new Panel();
+            panel_HashTable = new Panel();
+            panel_Binary = new Panel();
             panelMain.SuspendLayout();
             SuspendLayout();
             // 
             // panelMain
             // 
+            panelMain.Controls.Add(button_ok_FindNumber_BinarySearch);
+            panelMain.Controls.Add(lbl_find_Binary);
+            panelMain.Controls.Add(textBox_FindNumber_BinarySearch);
+            panelMain.Controls.Add(button_ok_FindNumber_LinearSearch);
+            panelMain.Controls.Add(lbl_find_Linear);
+            panelMain.Controls.Add(textBox_FindNumber_LinearSearch);
             panelMain.Controls.Add(textBox_NumsCount);
             panelMain.Controls.Add(lbl_log);
             panelMain.Controls.Add(lbl_list);
             panelMain.Controls.Add(richTextBox_Log);
-            panelMain.Controls.Add(btn_ok_Key);
-            panelMain.Controls.Add(lbl_key);
-            panelMain.Controls.Add(textBox_Key);
+            panelMain.Controls.Add(button_ok_KeyFind_HashTableSearch);
+            panelMain.Controls.Add(lbl_keyFind_HashTableSearch);
+            panelMain.Controls.Add(textBox_KeyFind_HashTableSearch);
             panelMain.Controls.Add(btn_Generate_Visible_List);
             panelMain.Controls.Add(button_HashTableSearch);
             panelMain.Controls.Add(lbl_numsCount);
             panelMain.Controls.Add(button_BinarySearch);
             panelMain.Controls.Add(button_LineSearch);
             panelMain.Controls.Add(richTextBox_List);
+            panelMain.Controls.Add(panel_List);
+            panelMain.Controls.Add(panel_Linear);
+            panelMain.Controls.Add(panel_HashTable);
+            panelMain.Controls.Add(panel_Binary);
             panelMain.Location = new Point(2, 1);
             panelMain.Name = "panelMain";
             panelMain.Size = new Size(1178, 525);
             panelMain.TabIndex = 0;
+            // 
+            // button_ok_FindNumber_BinarySearch
+            // 
+            button_ok_FindNumber_BinarySearch.AutoSize = true;
+            button_ok_FindNumber_BinarySearch.Image = (Image)resources.GetObject("button_ok_FindNumber_BinarySearch.Image");
+            button_ok_FindNumber_BinarySearch.Location = new Point(286, 275);
+            button_ok_FindNumber_BinarySearch.Name = "button_ok_FindNumber_BinarySearch";
+            button_ok_FindNumber_BinarySearch.Size = new Size(29, 29);
+            button_ok_FindNumber_BinarySearch.TabIndex = 20;
+            button_ok_FindNumber_BinarySearch.UseVisualStyleBackColor = true;
+            // 
+            // lbl_find_Binary
+            // 
+            lbl_find_Binary.AutoSize = true;
+            lbl_find_Binary.Location = new Point(41, 279);
+            lbl_find_Binary.Name = "lbl_find_Binary";
+            lbl_find_Binary.Size = new Size(68, 20);
+            lbl_find_Binary.TabIndex = 19;
+            lbl_find_Binary.Text = "Шукати:";
+            // 
+            // textBox_FindNumber_BinarySearch
+            // 
+            textBox_FindNumber_BinarySearch.Location = new Point(115, 276);
+            textBox_FindNumber_BinarySearch.Name = "textBox_FindNumber_BinarySearch";
+            textBox_FindNumber_BinarySearch.Size = new Size(165, 27);
+            textBox_FindNumber_BinarySearch.TabIndex = 18;
+            textBox_FindNumber_BinarySearch.Text = "Номер";
+            textBox_FindNumber_BinarySearch.TextAlign = HorizontalAlignment.Center;
+            // 
+            // button_ok_FindNumber_LinearSearch
+            // 
+            button_ok_FindNumber_LinearSearch.AutoSize = true;
+            button_ok_FindNumber_LinearSearch.Image = (Image)resources.GetObject("button_ok_FindNumber_LinearSearch.Image");
+            button_ok_FindNumber_LinearSearch.Location = new Point(286, 155);
+            button_ok_FindNumber_LinearSearch.Name = "button_ok_FindNumber_LinearSearch";
+            button_ok_FindNumber_LinearSearch.Size = new Size(29, 29);
+            button_ok_FindNumber_LinearSearch.TabIndex = 17;
+            button_ok_FindNumber_LinearSearch.UseVisualStyleBackColor = true;
+            button_ok_FindNumber_LinearSearch.Click += button_ok_FindNumber_LinearSearch_Click;
+            // 
+            // lbl_find_Linear
+            // 
+            lbl_find_Linear.AutoSize = true;
+            lbl_find_Linear.Location = new Point(41, 159);
+            lbl_find_Linear.Name = "lbl_find_Linear";
+            lbl_find_Linear.Size = new Size(68, 20);
+            lbl_find_Linear.TabIndex = 16;
+            lbl_find_Linear.Text = "Шукати:";
+            // 
+            // textBox_FindNumber_LinearSearch
+            // 
+            textBox_FindNumber_LinearSearch.Location = new Point(115, 156);
+            textBox_FindNumber_LinearSearch.Name = "textBox_FindNumber_LinearSearch";
+            textBox_FindNumber_LinearSearch.Size = new Size(165, 27);
+            textBox_FindNumber_LinearSearch.TabIndex = 15;
+            textBox_FindNumber_LinearSearch.Text = "Номер";
+            textBox_FindNumber_LinearSearch.TextAlign = HorizontalAlignment.Center;
             // 
             // textBox_NumsCount
             // 
@@ -104,34 +181,34 @@
             richTextBox_Log.TabIndex = 11;
             richTextBox_Log.Text = "";
             // 
-            // btn_ok_Key
+            // button_ok_KeyFind_HashTableSearch
             // 
-            btn_ok_Key.AutoSize = true;
-            btn_ok_Key.Image = (Image)resources.GetObject("btn_ok_Key.Image");
-            btn_ok_Key.Location = new Point(286, 156);
-            btn_ok_Key.Name = "btn_ok_Key";
-            btn_ok_Key.Size = new Size(29, 29);
-            btn_ok_Key.TabIndex = 10;
-            btn_ok_Key.UseVisualStyleBackColor = true;
+            button_ok_KeyFind_HashTableSearch.AutoSize = true;
+            button_ok_KeyFind_HashTableSearch.Image = (Image)resources.GetObject("button_ok_KeyFind_HashTableSearch.Image");
+            button_ok_KeyFind_HashTableSearch.Location = new Point(286, 399);
+            button_ok_KeyFind_HashTableSearch.Name = "button_ok_KeyFind_HashTableSearch";
+            button_ok_KeyFind_HashTableSearch.Size = new Size(29, 29);
+            button_ok_KeyFind_HashTableSearch.TabIndex = 10;
+            button_ok_KeyFind_HashTableSearch.UseVisualStyleBackColor = true;
             // 
-            // lbl_key
+            // lbl_keyFind_HashTableSearch
             // 
-            lbl_key.AutoSize = true;
-            lbl_key.Location = new Point(41, 160);
-            lbl_key.Name = "lbl_key";
-            lbl_key.Size = new Size(55, 20);
-            lbl_key.TabIndex = 9;
-            lbl_key.Text = "Ключ:";
+            lbl_keyFind_HashTableSearch.AutoSize = true;
+            lbl_keyFind_HashTableSearch.Location = new Point(41, 403);
+            lbl_keyFind_HashTableSearch.Name = "lbl_keyFind_HashTableSearch";
+            lbl_keyFind_HashTableSearch.Size = new Size(68, 20);
+            lbl_keyFind_HashTableSearch.TabIndex = 9;
+            lbl_keyFind_HashTableSearch.Text = "Шукати:";
             // 
-            // textBox_Key
+            // textBox_KeyFind_HashTableSearch
             // 
-            textBox_Key.Location = new Point(102, 157);
-            textBox_Key.Name = "textBox_Key";
-            textBox_Key.Size = new Size(178, 27);
-            textBox_Key.TabIndex = 8;
-            textBox_Key.Text = "Key";
-            textBox_Key.TextAlign = HorizontalAlignment.Center;
-            textBox_Key.Click += textBox_SellectAll_Click;
+            textBox_KeyFind_HashTableSearch.Location = new Point(115, 400);
+            textBox_KeyFind_HashTableSearch.Name = "textBox_KeyFind_HashTableSearch";
+            textBox_KeyFind_HashTableSearch.Size = new Size(165, 27);
+            textBox_KeyFind_HashTableSearch.TabIndex = 8;
+            textBox_KeyFind_HashTableSearch.Text = "Ключ";
+            textBox_KeyFind_HashTableSearch.TextAlign = HorizontalAlignment.Center;
+            textBox_KeyFind_HashTableSearch.Click += textBox_SellectAll_Click;
             // 
             // btn_Generate_Visible_List
             // 
@@ -145,9 +222,9 @@
             // 
             // button_HashTableSearch
             // 
-            button_HashTableSearch.Location = new Point(80, 332);
+            button_HashTableSearch.Location = new Point(41, 450);
             button_HashTableSearch.Name = "button_HashTableSearch";
-            button_HashTableSearch.Size = new Size(200, 45);
+            button_HashTableSearch.Size = new Size(274, 45);
             button_HashTableSearch.TabIndex = 6;
             button_HashTableSearch.Text = "Пошук по хеш-таблиці";
             button_HashTableSearch.UseVisualStyleBackColor = true;
@@ -163,21 +240,22 @@
             // 
             // button_BinarySearch
             // 
-            button_BinarySearch.Location = new Point(80, 270);
+            button_BinarySearch.Location = new Point(41, 322);
             button_BinarySearch.Name = "button_BinarySearch";
-            button_BinarySearch.Size = new Size(200, 45);
+            button_BinarySearch.Size = new Size(274, 45);
             button_BinarySearch.TabIndex = 2;
             button_BinarySearch.Text = "Бінарний пошук";
             button_BinarySearch.UseVisualStyleBackColor = true;
             // 
             // button_LineSearch
             // 
-            button_LineSearch.Location = new Point(80, 208);
+            button_LineSearch.Location = new Point(41, 208);
             button_LineSearch.Name = "button_LineSearch";
-            button_LineSearch.Size = new Size(200, 45);
+            button_LineSearch.Size = new Size(274, 45);
             button_LineSearch.TabIndex = 1;
             button_LineSearch.Text = "Лінійний пошук";
             button_LineSearch.UseVisualStyleBackColor = true;
+            button_LineSearch.Click += button_LineSearch_Click;
             // 
             // richTextBox_List
             // 
@@ -188,6 +266,38 @@
             richTextBox_List.Size = new Size(380, 428);
             richTextBox_List.TabIndex = 0;
             richTextBox_List.Text = "";
+            // 
+            // panel_List
+            // 
+            panel_List.BackColor = SystemColors.Window;
+            panel_List.Location = new Point(19, 19);
+            panel_List.Name = "panel_List";
+            panel_List.Size = new Size(316, 120);
+            panel_List.TabIndex = 21;
+            // 
+            // panel_Linear
+            // 
+            panel_Linear.BackColor = SystemColors.Window;
+            panel_Linear.Location = new Point(19, 141);
+            panel_Linear.Name = "panel_Linear";
+            panel_Linear.Size = new Size(316, 120);
+            panel_Linear.TabIndex = 22;
+            // 
+            // panel_HashTable
+            // 
+            panel_HashTable.BackColor = SystemColors.Window;
+            panel_HashTable.Location = new Point(19, 385);
+            panel_HashTable.Name = "panel_HashTable";
+            panel_HashTable.Size = new Size(316, 120);
+            panel_HashTable.TabIndex = 23;
+            // 
+            // panel_Binary
+            // 
+            panel_Binary.BackColor = SystemColors.Window;
+            panel_Binary.Location = new Point(19, 263);
+            panel_Binary.Name = "panel_Binary";
+            panel_Binary.Size = new Size(316, 120);
+            panel_Binary.TabIndex = 24;
             // 
             // AlgorithmSearch
             // 
@@ -213,9 +323,9 @@
         private Label lbl_numsCount;
         private Button button_HashTableSearch;
         private Button btn_Generate_Visible_List;
-        private TextBox textBox_Key;
-        private Label lbl_key;
-        private Button btn_ok_Key;
+        private TextBox textBox_KeyFind_HashTableSearch;
+        private Label lbl_keyFind_HashTableSearch;
+        private Button button_ok_KeyFind_HashTableSearch;
         private Label lbl_log;
         private Label lbl_list;
         private RadioButton radioButton6;
@@ -226,5 +336,15 @@
         private TextBox textBox_NumsCount;
         public RichTextBox richTextBox_Log;
         public RichTextBox richTextBox_List;
+        private Button button_ok_FindNumber_LinearSearch;
+        private Label lbl_find_Linear;
+        private TextBox textBox_FindNumber_LinearSearch;
+        private Button button_ok_FindNumber_BinarySearch;
+        private Label lbl_find_Binary;
+        private TextBox textBox_FindNumber_BinarySearch;
+        private Panel panel_List;
+        private Panel panel_Linear;
+        private Panel panel_HashTable;
+        private Panel panel_Binary;
     }
 }

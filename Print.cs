@@ -10,7 +10,7 @@ namespace AlgorithmSearch
     {
         static public string InfoLog(string name, string details, long time, string unit)
         {
-            return $"{name}\n{details}: {time} {unit}.\n";
+            return $"{name}: {details}\nЧас: {time} {unit}.\n";
         }
         static public string InfoLogReset()
         {

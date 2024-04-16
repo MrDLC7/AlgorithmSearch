@@ -21,9 +21,10 @@ namespace AlgorithmSearch
         {
             Stopwatch stopwatch = new Stopwatch();
             stopwatch.Start();
-
+            
             for (int i = 0; i < numbers.GetLength(0); i++)
             {
+                //  Якщо знайдено зберегти кількість кроків, номер, індекс, хеш-код, час
                 if (Convert.ToInt64(numbers[i].value) == target)
                 {
                     _Step = i;

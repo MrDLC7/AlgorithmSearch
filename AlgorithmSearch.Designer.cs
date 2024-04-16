@@ -95,6 +95,7 @@
             button_ok_FindNumber_BinarySearch.Size = new Size(29, 29);
             button_ok_FindNumber_BinarySearch.TabIndex = 20;
             button_ok_FindNumber_BinarySearch.UseVisualStyleBackColor = true;
+            button_ok_FindNumber_BinarySearch.Click += button_ok_FindNumber_Search_Click;
             // 
             // lbl_find_Binary
             // 
@@ -124,7 +125,7 @@
             button_ok_FindNumber_LinearSearch.Size = new Size(29, 29);
             button_ok_FindNumber_LinearSearch.TabIndex = 17;
             button_ok_FindNumber_LinearSearch.UseVisualStyleBackColor = true;
-            button_ok_FindNumber_LinearSearch.Click += button_ok_FindNumber_LinearSearch_Click;
+            button_ok_FindNumber_LinearSearch.Click += button_ok_FindNumber_Search_Click;
             // 
             // lbl_find_Linear
             // 

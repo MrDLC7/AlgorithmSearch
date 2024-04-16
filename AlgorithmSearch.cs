@@ -30,7 +30,7 @@ namespace AlgorithmSearch
             public string hash;
         }
         Numbers[] numbers;
-        long target_linearSearch = 0;
+        long target = 0;
 
         private void button_Generate_Visible_List_Click(object sender, EventArgs e)
         {
@@ -51,29 +51,39 @@ namespace AlgorithmSearch
             }
         }
 
-        private void button_LineSearch_Click(object sender, EventArgs e)
+        private void button_LinearSearch_Click(object sender, EventArgs e)
         {
-            if (target_linearSearch != 0)
+            if (target != 0)
             {
-                LinearSearch linearSearch = new LinearSearch(numbers, target_linearSearch);
+                LinearSearch linearSearch = new LinearSearch(numbers, target);
 
                 richTextBox_List.Text = Print.InfoList(numbers);
-                richTextBox_Log.Text = Print.InfoLog("Лінійний пошук", target_linearSearch.ToString(), linearSearch._Time, "мк");
-                target_linearSearch = 0;
+                richTextBox_Log.Text += Print.InfoLogSearch("Лінійний пошук", "+" + target.ToString(), linearSearch._Time, "мк", linearSearch._Result, linearSearch._Step);
+                target = 0;
             }
         }
 
         private void button_ok_FindNumber_LinearSearch_Click(object sender, EventArgs e)
         {
             long result;
+            long min = 380000000000;
+            long max = 381000000000;
             if (long.TryParse(textBox_FindNumber_LinearSearch.Text, out result))
             {
-                target_linearSearch = result;
+                target = result;
+                if (result > min && result < max)
+                {
+                    richTextBox_Log.Text += $"Шукати: +{textBox_FindNumber_LinearSearch.Text}\n";
+                }
+                else
+                {
+                    MessageBox.Show("Невірний номер\nЗразок: 380*********");
+                }
+
             }
             else
             {
                 MessageBox.Show("Шукати тільки номер");
-                textBox_FindNumber_LinearSearch.SelectAll();
             }
         }
     }

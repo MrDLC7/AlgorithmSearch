@@ -12,7 +12,7 @@ namespace AlgorithmSearch
     {
         private long _time;
 
-        public long _Time { get; set; }
+        public long _Time { get => _time; set => _time = value; }
 
 
         public Generate(Numbers[] numbers, int size)
@@ -36,7 +36,7 @@ namespace AlgorithmSearch
                 fouth = random.Next(999);
                 numbers[i].value = NumToString(first) + NumToString(second) + NumToString(thirtd) + NumToString(fouth);
 
-                hash = (Convert.ToInt64(numbers[i].value) % 10204).GetHashCode().ToString();
+                hash = (Convert.ToInt64(numbers[i].value) % (size + 1)).GetHashCode().ToString();
                 numbers[i].hash = hash;
                 int n = (int)(Convert.ToInt64(hash) % size);
                 if (numbers[n].key == -1)
@@ -51,6 +51,7 @@ namespace AlgorithmSearch
                 i++;
             }
             stopwatch.Stop();
+            _Time = stopwatch.ElapsedTicks / (Stopwatch.Frequency / (1000L * 1000L));
         }
 
         private string NumToString(int num)
@@ -102,5 +103,4 @@ namespace AlgorithmSearch
             return num;
         }
     }
-
 }

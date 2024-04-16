@@ -31,5 +31,9 @@ namespace AlgorithmSearch
         {
             return "";
         }
+        static public string InfoLogSearch(string name, string details, long time, string unit, string? result, long step)
+        {
+            return $"{name}: {details}\nЧас: {time} {unit}.\nРезультат: {result}\nКількість кроків: {step}\n";
+        }
     }
 }

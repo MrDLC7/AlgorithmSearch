@@ -118,7 +118,27 @@
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
   <assembly alias="System.Drawing" name="System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" />
-  <data name="btn_ok_Key.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+  <data name="button_ok_FindNumber_BinarySearch.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+    <value>
+        iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAAABGdBTUEAALGPC/xhBQAAAAlwSFlzAAAO
+        vAAADrwBlbxySQAAAOFJREFUOE+lky0OwkAYRHsEjoJAICuQiEoEgosQNCAIgoCCE5AKFA4FDpJaBAmy
+        pq72Y6fZIZ1QApRJnpt5Yn8CMxPyPL85msGHsC9j4MbmyByh71aGfRkDCPrrnqVZCtHA91/CvowBBO1J
+        y6JV15J7AsnGbyTsyxhQADrz0E7XIySxo+G3RdiXMSgLSHzeQnIpS9iXMagSgOl+zMMtboh9GYN3AjDa
+        DSmJ2K8rCNn/WrA8LDB+PjL2ZQyqBLUPEdfIt1AeI+zLGFCA1+jHM7+RsC9jAMHfT9nx12f64Ttb8AC9
+        DS7Yc1YSRQAAAABJRU5ErkJggg==
+</value>
+  </data>
+  <data name="button_ok_FindNumber_LinearSearch.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+    <value>
+        iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAAABGdBTUEAALGPC/xhBQAAAAlwSFlzAAAO
+        vAAADrwBlbxySQAAAOFJREFUOE+lky0OwkAYRHsEjoJAICuQiEoEgosQNCAIgoCCE5AKFA4FDpJaBAmy
+        pq72Y6fZIZ1QApRJnpt5Yn8CMxPyPL85msGHsC9j4MbmyByh71aGfRkDCPrrnqVZCtHA91/CvowBBO1J
+        y6JV15J7AsnGbyTsyxhQADrz0E7XIySxo+G3RdiXMSgLSHzeQnIpS9iXMagSgOl+zMMtboh9GYN3AjDa
+        DSmJ2K8rCNn/WrA8LDB+PjL2ZQyqBLUPEdfIt1AeI+zLGFCA1+jHM7+RsC9jAMHfT9nx12f64Ttb8AC9
+        DS7Yc1YSRQAAAABJRU5ErkJggg==
+</value>
+  </data>
+  <data name="button_ok_KeyFind_HashTableSearch.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
     <value>
         iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAAABGdBTUEAALGPC/xhBQAAAAlwSFlzAAAO
         vAAADrwBlbxySQAAAOFJREFUOE+lky0OwkAYRHsEjoJAICuQiEoEgosQNCAIgoCCE5AKFA4FDpJaBAmy

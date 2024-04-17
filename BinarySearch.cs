@@ -9,8 +9,8 @@ namespace AlgorithmSearch
 {
     internal class BinarySearch : AlgorithmSearch
     {
-        private long _time;         //  Час виконання
-        private string? _result;    //  Результат
+        private long _time;             //  Час виконання
+        private string? _result;        //  Результат
         private long _step = 0;         //  Кроки
 
         public long _Time { get => _time; set => _time = value; }
@@ -40,8 +40,11 @@ namespace AlgorithmSearch
                 {
                     left = mid + 1;
                 }
+                else
+                {
+                    right = mid - 1;
+                }
             }
-
 
             stopwatch.Stop();
             _Time = stopwatch.ElapsedTicks / (Stopwatch.Frequency / (1000L * 1000L));

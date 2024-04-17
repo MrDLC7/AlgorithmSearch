@@ -9,8 +9,8 @@ namespace AlgorithmSearch
 {
     internal class LinearSearch : AlgorithmSearch
     {
-        private long _time;         //  Час виконання
-        private string? _result;    //  Результат
+        private long _time;             //  Час виконання
+        private string? _result;        //  Результат
         private long _step = 0;         //  Кроки
 
         public long _Time { get => _time; set => _time = value; }

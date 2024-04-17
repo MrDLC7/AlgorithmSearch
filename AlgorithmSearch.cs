@@ -24,10 +24,9 @@ namespace AlgorithmSearch
 
         public struct Numbers
         {
-            public long key;
             public int index;
-            public string value;
-            public string hash;
+            public long value;
+            public int hash;
         }
         Numbers[]? numbers;
         long target = 0;

@@ -24,10 +24,10 @@ namespace AlgorithmSearch
         static public string InfoList(Numbers[] nums)
         {
             string output = string.Empty;
-            output += "Номер\t\t\t" + "Ключ\t" + "Хеш-код\n";
+            output += "Номер\t\t\t" + "Індекс\t\t" + "Хеш-код\n";
             foreach (var item in nums)
             {
-                output += $"+{item.value}\t\t{item.key}\t {item.hash}\n";
+                output += $"+{item.value}\t\t{item.index}\t\t{item.hash}\n";
             }
             return output;
         }

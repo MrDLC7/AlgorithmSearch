@@ -21,13 +21,14 @@ namespace AlgorithmSearch
             Random random = new Random();
 
             int first = 380, second, thirtd, fouth;         //  Частини номера
-            string hash;                                    //  Хеш-значення
+            int hash;
+            long value;
             stopwatch.Start();
 
             //  Заповнення -1, - для унікальності номерів
             for (int i = 0; i < size; i++)
             {
-                numbers[i].key = -1;
+                numbers[i].index = -1;
             }
 
             for (int i = 0; i < size;)
@@ -35,15 +36,16 @@ namespace AlgorithmSearch
                 second = NumCode() * 10 + random.Next(10);
                 thirtd = random.Next(999);
                 fouth = random.Next(999);
-                numbers[i].value = NumToString(first) + NumToString(second) + NumToString(thirtd) + NumToString(fouth);
 
-                hash = (Convert.ToInt64(numbers[i].value) % (size + 1)).GetHashCode().ToString();
-                numbers[i].hash = hash;
-                int n = (int)(Convert.ToInt64(hash) % size);
-                if (numbers[n].key == -1)
+                value = Convert.ToInt64(NumToString(first) + NumToString(second) + NumToString(thirtd) + NumToString(fouth));
+                hash = (value % (size + 1)).GetHashCode();
+                
+                int n = (int)(hash % size);
+                if (numbers[n].index == -1)
                 {
-                    numbers[n].key = n;
                     numbers[n].index = n;
+                    numbers[n].hash = hash;
+                    numbers[n].value = value;
                 }
                 else
                 {

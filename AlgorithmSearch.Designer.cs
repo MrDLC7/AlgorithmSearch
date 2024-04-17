@@ -40,9 +40,9 @@
             lbl_log = new Label();
             lbl_list = new Label();
             richTextBox_Log = new RichTextBox();
-            button_ok_KeyFind_HashTableSearch = new Button();
+            button_ok_FindNumber_HashTableSearch = new Button();
             lbl_keyFind_HashTableSearch = new Label();
-            textBox_KeyFind_HashTableSearch = new TextBox();
+            textBox_FindNumber_HashTableSearch = new TextBox();
             btn_Generate_Visible_List = new Button();
             button_HashTableSearch = new Button();
             lbl_numsCount = new Label();
@@ -68,9 +68,9 @@
             panelMain.Controls.Add(lbl_log);
             panelMain.Controls.Add(lbl_list);
             panelMain.Controls.Add(richTextBox_Log);
-            panelMain.Controls.Add(button_ok_KeyFind_HashTableSearch);
+            panelMain.Controls.Add(button_ok_FindNumber_HashTableSearch);
             panelMain.Controls.Add(lbl_keyFind_HashTableSearch);
-            panelMain.Controls.Add(textBox_KeyFind_HashTableSearch);
+            panelMain.Controls.Add(textBox_FindNumber_HashTableSearch);
             panelMain.Controls.Add(btn_Generate_Visible_List);
             panelMain.Controls.Add(button_HashTableSearch);
             panelMain.Controls.Add(lbl_numsCount);
@@ -184,15 +184,16 @@
             richTextBox_Log.TabIndex = 11;
             richTextBox_Log.Text = "";
             // 
-            // button_ok_KeyFind_HashTableSearch
+            // button_ok_FindNumber_HashTableSearch
             // 
-            button_ok_KeyFind_HashTableSearch.AutoSize = true;
-            button_ok_KeyFind_HashTableSearch.Image = (Image)resources.GetObject("button_ok_KeyFind_HashTableSearch.Image");
-            button_ok_KeyFind_HashTableSearch.Location = new Point(286, 402);
-            button_ok_KeyFind_HashTableSearch.Name = "button_ok_KeyFind_HashTableSearch";
-            button_ok_KeyFind_HashTableSearch.Size = new Size(29, 29);
-            button_ok_KeyFind_HashTableSearch.TabIndex = 10;
-            button_ok_KeyFind_HashTableSearch.UseVisualStyleBackColor = true;
+            button_ok_FindNumber_HashTableSearch.AutoSize = true;
+            button_ok_FindNumber_HashTableSearch.Image = (Image)resources.GetObject("button_ok_FindNumber_HashTableSearch.Image");
+            button_ok_FindNumber_HashTableSearch.Location = new Point(286, 402);
+            button_ok_FindNumber_HashTableSearch.Name = "button_ok_FindNumber_HashTableSearch";
+            button_ok_FindNumber_HashTableSearch.Size = new Size(29, 29);
+            button_ok_FindNumber_HashTableSearch.TabIndex = 10;
+            button_ok_FindNumber_HashTableSearch.UseVisualStyleBackColor = true;
+            button_ok_FindNumber_HashTableSearch.Click += button_ok_FindNumber_Search_Click;
             // 
             // lbl_keyFind_HashTableSearch
             // 
@@ -203,15 +204,15 @@
             lbl_keyFind_HashTableSearch.TabIndex = 9;
             lbl_keyFind_HashTableSearch.Text = "Шукати:";
             // 
-            // textBox_KeyFind_HashTableSearch
+            // textBox_FindNumber_HashTableSearch
             // 
-            textBox_KeyFind_HashTableSearch.Location = new Point(115, 403);
-            textBox_KeyFind_HashTableSearch.Name = "textBox_KeyFind_HashTableSearch";
-            textBox_KeyFind_HashTableSearch.Size = new Size(165, 27);
-            textBox_KeyFind_HashTableSearch.TabIndex = 8;
-            textBox_KeyFind_HashTableSearch.Text = "Ключ";
-            textBox_KeyFind_HashTableSearch.TextAlign = HorizontalAlignment.Center;
-            textBox_KeyFind_HashTableSearch.Click += textBox_SellectAll_Click;
+            textBox_FindNumber_HashTableSearch.Location = new Point(115, 403);
+            textBox_FindNumber_HashTableSearch.Name = "textBox_FindNumber_HashTableSearch";
+            textBox_FindNumber_HashTableSearch.Size = new Size(165, 27);
+            textBox_FindNumber_HashTableSearch.TabIndex = 8;
+            textBox_FindNumber_HashTableSearch.Text = "Номер";
+            textBox_FindNumber_HashTableSearch.TextAlign = HorizontalAlignment.Center;
+            textBox_FindNumber_HashTableSearch.Click += textBox_SellectAll_Click;
             // 
             // btn_Generate_Visible_List
             // 
@@ -326,9 +327,9 @@
         private Label lbl_numsCount;
         private Button button_HashTableSearch;
         private Button btn_Generate_Visible_List;
-        private TextBox textBox_KeyFind_HashTableSearch;
+        private TextBox textBox_FindNumber_HashTableSearch;
         private Label lbl_keyFind_HashTableSearch;
-        private Button button_ok_KeyFind_HashTableSearch;
+        private Button button_ok_FindNumber_HashTableSearch;
         private Label lbl_log;
         private Label lbl_list;
         private RadioButton radioButton6;

@@ -11,7 +11,7 @@ namespace AlgorithmSearch
     {
         private long _time;         //  Час виконання
         private string? _result;    //  Результат
-        private long _step;         //  Кроки
+        private long _step = 0;         //  Кроки
 
         public long _Time { get => _time; set => _time = value; }
         public string? _Result { get => _result; set => _result = value; }
@@ -24,8 +24,8 @@ namespace AlgorithmSearch
             
             for (int i = 0; i < numbers.GetLength(0); i++)
             {
-                //  Якщо знайдено зберегти кількість кроків, номер, індекс, хеш-код, час
-                if (Convert.ToInt64(numbers[i].value) == target)
+                //  Якщо знайдено - зберегти кількість кроків, номер, індекс, хеш-код, час
+                if (numbers[i].value == target)
                 {
                     _Step = i;
                     _Result = $"+{numbers[i].value}\nІндекс: {numbers[i].index}\nХеш-код: {numbers[i].hash}";

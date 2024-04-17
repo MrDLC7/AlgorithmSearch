@@ -11,7 +11,13 @@ namespace AlgorithmSearch
         //  Загальне виведення дій (Лог)
         static public string InfoLog(string name, string details, long time, string unit)
         {
-            return $"{name}: {details}\nЧас: {time} {unit}.\n";
+            return $"{name}: {details}\nЧас: {time} {unit}.\n\n";
+        }
+
+        //  Виведення дій пошуку (Лог)
+        static public string InfoLog(string name, string details, long time, string unit, string? result, long step)
+        {
+            return $"{name}: {details}\nЧас: {time} {unit}.\nРезультат: {result}\nКількість кроків: {step}\n\n";
         }
 
         //  Очищення (Лог)
@@ -24,10 +30,10 @@ namespace AlgorithmSearch
         static public string InfoList(Numbers[] nums)
         {
             string output = string.Empty;
-            output += "Номер\t\t\t" + "Індекс\t\t" + "Хеш-код\n";
+            output += "Номер\t\t\tХеш-код\n";
             foreach (var item in nums)
             {
-                output += $"+{item.value}\t\t{item.index}\t\t{item.hash}\n";
+                output += $"+{item.value}\t\t{item.hash}\n";
             }
             return output;
         }
@@ -36,12 +42,6 @@ namespace AlgorithmSearch
         static public string InfoListReset()
         {
             return "";
-        }
-
-        //  Виведення дій пошуку (Лог)
-        static public string InfoLogSearch(string name, string details, long time, string unit, string? result, long step)
-        {
-            return $"{name}: {details}\nЧас: {time} {unit}.\nРезультат: {result}\nКількість кроків: {step}\n";
         }
     }
 }

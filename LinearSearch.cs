@@ -9,9 +9,9 @@ namespace AlgorithmSearch
 {
     internal class LinearSearch : AlgorithmSearch
     {
-        private long _time;         //  Час виконання
-        private string? _result;    //  Результат
-        private long _step = 0;         //  Кроки
+        private long _time;             //  Час виконання
+        private string? _result;        //  Результат
+        private long _step;             //  Кроки
 
         public long _Time { get => _time; set => _time = value; }
         public string? _Result { get => _result; set => _result = value; }
@@ -19,6 +19,7 @@ namespace AlgorithmSearch
 
         public LinearSearch(Numbers[] numbers, long target) 
         {
+            _Step = 0;
             Stopwatch stopwatch = new Stopwatch();
             stopwatch.Start();
             
@@ -28,19 +29,16 @@ namespace AlgorithmSearch
                 if (numbers[i].value == target)
                 {
                     _Step = i;
-                    _Result = $"+{numbers[i].value}\nІндекс: {numbers[i].index}\nХеш-код: {numbers[i].hash}";
-
                     stopwatch.Stop();
+                    _Result = $"+{numbers[i].value}\nХеш-код: {numbers[i].hash}";
                     _Time = stopwatch.ElapsedTicks / (Stopwatch.Frequency / (1000L * 1000L));
                     return;
                 }
             }
-
-            stopwatch.Stop();
-            _Time = stopwatch.ElapsedTicks / (Stopwatch.Frequency / (1000L * 1000L));
-
-            _Result = "Не знайдено";
             _Step = numbers.GetLength(0);
+            stopwatch.Stop();
+            _Result = "Не знайдено";
+            _Time = stopwatch.ElapsedTicks / (Stopwatch.Frequency / (1000L * 1000L));
         }
     }
 }

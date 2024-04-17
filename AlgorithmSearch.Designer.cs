@@ -30,6 +30,8 @@
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(AlgorithmSearch));
             panelMain = new Panel();
+            button_Clear_List = new Button();
+            button_Clear_Log = new Button();
             button_ok_FindNumber_BinarySearch = new Button();
             lbl_find_Binary = new Label();
             textBox_FindNumber_BinarySearch = new TextBox();
@@ -47,7 +49,7 @@
             button_HashTableSearch = new Button();
             lbl_numsCount = new Label();
             button_BinarySearch = new Button();
-            button_LineSearch = new Button();
+            button_LinearSearch = new Button();
             richTextBox_List = new RichTextBox();
             panel_List = new Panel();
             panel_Linear = new Panel();
@@ -58,6 +60,8 @@
             // 
             // panelMain
             // 
+            panelMain.Controls.Add(button_Clear_List);
+            panelMain.Controls.Add(button_Clear_Log);
             panelMain.Controls.Add(button_ok_FindNumber_BinarySearch);
             panelMain.Controls.Add(lbl_find_Binary);
             panelMain.Controls.Add(textBox_FindNumber_BinarySearch);
@@ -75,7 +79,7 @@
             panelMain.Controls.Add(button_HashTableSearch);
             panelMain.Controls.Add(lbl_numsCount);
             panelMain.Controls.Add(button_BinarySearch);
-            panelMain.Controls.Add(button_LineSearch);
+            panelMain.Controls.Add(button_LinearSearch);
             panelMain.Controls.Add(richTextBox_List);
             panelMain.Controls.Add(panel_List);
             panelMain.Controls.Add(panel_Linear);
@@ -85,6 +89,26 @@
             panelMain.Name = "panelMain";
             panelMain.Size = new Size(1178, 525);
             panelMain.TabIndex = 0;
+            // 
+            // button_Clear_List
+            // 
+            button_Clear_List.Location = new Point(455, 477);
+            button_Clear_List.Name = "button_Clear_List";
+            button_Clear_List.Size = new Size(180, 38);
+            button_Clear_List.TabIndex = 26;
+            button_Clear_List.Text = "Очистити \"Список\"";
+            button_Clear_List.UseVisualStyleBackColor = true;
+            button_Clear_List.Click += button_Clear_List_Click;
+            // 
+            // button_Clear_Log
+            // 
+            button_Clear_Log.Location = new Point(866, 477);
+            button_Clear_Log.Name = "button_Clear_Log";
+            button_Clear_Log.Size = new Size(180, 38);
+            button_Clear_Log.TabIndex = 25;
+            button_Clear_Log.Text = "Очистити \"Лог\"";
+            button_Clear_Log.UseVisualStyleBackColor = true;
+            button_Clear_Log.Click += button_Clear_Log_Click;
             // 
             // button_ok_FindNumber_BinarySearch
             // 
@@ -180,7 +204,7 @@
             richTextBox_Log.Location = new Point(761, 67);
             richTextBox_Log.Name = "richTextBox_Log";
             richTextBox_Log.ReadOnly = true;
-            richTextBox_Log.Size = new Size(380, 428);
+            richTextBox_Log.Size = new Size(380, 404);
             richTextBox_Log.TabIndex = 11;
             richTextBox_Log.Text = "";
             // 
@@ -232,6 +256,7 @@
             button_HashTableSearch.TabIndex = 6;
             button_HashTableSearch.Text = "Пошук по хеш-таблиці";
             button_HashTableSearch.UseVisualStyleBackColor = true;
+            button_HashTableSearch.Click += button_HashTableSearch_Click;
             // 
             // lbl_numsCount
             // 
@@ -250,16 +275,17 @@
             button_BinarySearch.TabIndex = 2;
             button_BinarySearch.Text = "Бінарний пошук";
             button_BinarySearch.UseVisualStyleBackColor = true;
+            button_BinarySearch.Click += button_BinarySearch_Click;
             // 
-            // button_LineSearch
+            // button_LinearSearch
             // 
-            button_LineSearch.Location = new Point(41, 203);
-            button_LineSearch.Name = "button_LineSearch";
-            button_LineSearch.Size = new Size(274, 45);
-            button_LineSearch.TabIndex = 1;
-            button_LineSearch.Text = "Лінійний пошук";
-            button_LineSearch.UseVisualStyleBackColor = true;
-            button_LineSearch.Click += button_LinearSearch_Click;
+            button_LinearSearch.Location = new Point(41, 203);
+            button_LinearSearch.Name = "button_LinearSearch";
+            button_LinearSearch.Size = new Size(274, 45);
+            button_LinearSearch.TabIndex = 1;
+            button_LinearSearch.Text = "Лінійний пошук";
+            button_LinearSearch.UseVisualStyleBackColor = true;
+            button_LinearSearch.Click += button_LinearSearch_Click;
             // 
             // richTextBox_List
             // 
@@ -267,7 +293,7 @@
             richTextBox_List.Location = new Point(350, 67);
             richTextBox_List.Name = "richTextBox_List";
             richTextBox_List.ReadOnly = true;
-            richTextBox_List.Size = new Size(380, 428);
+            richTextBox_List.Size = new Size(380, 404);
             richTextBox_List.TabIndex = 0;
             richTextBox_List.Text = "";
             // 
@@ -323,7 +349,7 @@
 
         private Panel panelMain;
         private Button button_BinarySearch;
-        private Button button_LineSearch;
+        private Button button_LinearSearch;
         private Label lbl_numsCount;
         private Button button_HashTableSearch;
         private Button btn_Generate_Visible_List;
@@ -332,11 +358,6 @@
         private Button button_ok_FindNumber_HashTableSearch;
         private Label lbl_log;
         private Label lbl_list;
-        private RadioButton radioButton6;
-        private RadioButton radioButton5;
-        private RadioButton radioButton4;
-        private RadioButton radioButton3;
-        private RadioButton radioButton2;
         private TextBox textBox_NumsCount;
         public RichTextBox richTextBox_Log;
         public RichTextBox richTextBox_List;
@@ -350,5 +371,7 @@
         private Panel panel_Linear;
         private Panel panel_HashTable;
         private Panel panel_Binary;
+        private Button button_Clear_List;
+        private Button button_Clear_Log;
     }
 }

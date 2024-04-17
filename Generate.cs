@@ -21,6 +21,7 @@ namespace AlgorithmSearch
             Random random = new Random();
 
             int first = 380, second, thirtd, fouth;         //  Частини номера
+            int index;
             int hash;
             long value;
             stopwatch.Start();
@@ -28,7 +29,7 @@ namespace AlgorithmSearch
             //  Заповнення -1, - для унікальності номерів
             for (int i = 0; i < size; i++)
             {
-                numbers[i].index = -1;
+                numbers[i].hash = -1;
             }
 
             for (int i = 0; i < size;)
@@ -38,14 +39,15 @@ namespace AlgorithmSearch
                 fouth = random.Next(999);
 
                 value = Convert.ToInt64(NumToString(first) + NumToString(second) + NumToString(thirtd) + NumToString(fouth));
-                hash = (value % (size + 1)).GetHashCode();
                 
-                int n = (int)(hash % size);
-                if (numbers[n].index == -1)
+                hash = Math.Abs(HashFunction(value.ToString()));
+                index = hash % size;
+
+                if (numbers[index].hash == -1)
                 {
-                    numbers[n].index = n;
-                    numbers[n].hash = hash;
-                    numbers[n].value = value;
+                    numbers[index].value = value;
+                    numbers[index].index = index;
+                    numbers[index].hash = hash;
                 }
                 else
                 {
@@ -106,6 +108,20 @@ namespace AlgorithmSearch
                     break;
             }
             return num;
+        }
+        
+        //  Хеш-код для номера
+        private int HashFunction(string input)
+        {
+            unchecked
+            {
+                int hash = 5381;
+                foreach (char c in input)
+                {
+                    hash = ((hash << 5) + hash) + c;
+                }
+                return hash;
+            }
         }
     }
 }

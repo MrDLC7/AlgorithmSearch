@@ -208,6 +208,7 @@
             richTextBox_Log.TabIndex = 32;
             richTextBox_Log.TabStop = false;
             richTextBox_Log.Text = "";
+            richTextBox_Log.TextChanged += richTextBox_Log_TextChanged;
             // 
             // button_ok_FindNumber_HashTableSearch
             // 

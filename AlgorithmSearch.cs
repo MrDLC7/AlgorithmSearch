@@ -20,6 +20,8 @@ namespace AlgorithmSearch
             InitializeComponent();
         }
 
+        #region Implementation 
+
         public struct Numbers
         {
             public long value;
@@ -151,7 +153,7 @@ namespace AlgorithmSearch
                 target = 0;
             }
         }
-        
+
         //  Очищення "Список"
         private void button_Clear_List_Click(object sender, EventArgs e)
         {
@@ -162,6 +164,15 @@ namespace AlgorithmSearch
         private void button_Clear_Log_Click(object sender, EventArgs e)
         {
             richTextBox_Log.Text = Print.InfoLogReset();
+        }
+
+
+        #endregion
+
+        private void richTextBox_Log_TextChanged(object sender, EventArgs e)
+        {
+            richTextBox_Log.SelectionStart = richTextBox_Log.Text.Length;
+            richTextBox_Log.ScrollToCaret();
         }
     }
 }

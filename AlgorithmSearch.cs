@@ -10,8 +10,6 @@ using System.Net.NetworkInformation;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
-using AlgorithmSearch;
-using Microsoft.VisualBasic.Logging;
 
 namespace AlgorithmSearch
 {

@@ -26,8 +26,8 @@ namespace AlgorithmSearch
         {
             _Step = 0;
             Stopwatch stopwatch = new Stopwatch();
-            SortNumbers(numbers);
 
+            SortNumbers(numbers);
             stopwatch.Restart();
 
             int hash = Math.Abs(HashFunction(target.ToString()));

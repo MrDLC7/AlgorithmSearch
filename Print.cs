@@ -9,15 +9,15 @@ namespace AlgorithmSearch
     internal class Print : AlgorithmSearch
     {
         //  Загальне виведення дій (Лог)
-        static public string InfoLog(string name, string details, long time, string unit)
+        static public string InfoLog(string name, long time, string unit)
         {
-            return $"{name}: {details}\nЧас: {time} {unit}.\n\n";
+            return $"{name}\nЧас: {time} {unit}.\n\n";
         }
 
         //  Виведення дій пошуку (Лог)
         static public string InfoLog(string name, string details, long time, string unit, string? result, long step)
         {
-            return $"{name}: {details}\nЧас: {time} {unit}.\nРезультат: {result}\nКількість кроків: {step}\n\n";
+            return $"{name}\nЧас пошуку: {time} {unit}.\nРезультат: {result}\nКількість кроків: {step}\n\n";
         }
 
         //  Очищення (Лог)
@@ -42,6 +42,13 @@ namespace AlgorithmSearch
         static public string InfoListReset()
         {
             return "";
+        }
+
+        //  Розділення "Лог" після кожної виконаної дії
+        static public string InfoLogSeparation()
+        {
+            string temp = "---------------------------------------------------------";
+            return $"\n{temp}\n{temp}\n\n";
         }
     }
 }

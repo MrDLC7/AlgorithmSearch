@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(AlgorithmSearch));
             panelMain = new Panel();
             button_Clear_List = new Button();
@@ -55,6 +56,7 @@
             panel_Linear = new Panel();
             panel_HashTable = new Panel();
             panel_Binary = new Panel();
+            timer = new System.Windows.Forms.Timer(components);
             panelMain.SuspendLayout();
             SuspendLayout();
             // 
@@ -332,6 +334,12 @@
             panel_Binary.Size = new Size(316, 116);
             panel_Binary.TabIndex = 24;
             // 
+            // timer
+            // 
+            timer.Enabled = true;
+            timer.Interval = 1;
+            timer.Tick += Timer_Tick;
+            // 
             // AlgorithmSearch
             // 
             AutoScaleDimensions = new SizeF(9F, 20F);
@@ -376,5 +384,6 @@
         private Panel panel_Binary;
         private Button button_Clear_List;
         private Button button_Clear_Log;
+        private System.Windows.Forms.Timer timer;
     }
 }

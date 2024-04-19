@@ -115,6 +115,7 @@
             // button_ok_FindNumber_BinarySearch
             // 
             button_ok_FindNumber_BinarySearch.AutoSize = true;
+            button_ok_FindNumber_BinarySearch.Enabled = false;
             button_ok_FindNumber_BinarySearch.Image = (Image)resources.GetObject("button_ok_FindNumber_BinarySearch.Image");
             button_ok_FindNumber_BinarySearch.Location = new Point(286, 279);
             button_ok_FindNumber_BinarySearch.Name = "button_ok_FindNumber_BinarySearch";
@@ -126,6 +127,7 @@
             // lbl_find_Binary
             // 
             lbl_find_Binary.AutoSize = true;
+            lbl_find_Binary.BackColor = SystemColors.Window;
             lbl_find_Binary.Location = new Point(41, 283);
             lbl_find_Binary.Name = "lbl_find_Binary";
             lbl_find_Binary.Size = new Size(68, 20);
@@ -134,6 +136,7 @@
             // 
             // textBox_FindNumber_BinarySearch
             // 
+            textBox_FindNumber_BinarySearch.Enabled = false;
             textBox_FindNumber_BinarySearch.Location = new Point(115, 280);
             textBox_FindNumber_BinarySearch.Name = "textBox_FindNumber_BinarySearch";
             textBox_FindNumber_BinarySearch.Size = new Size(165, 27);
@@ -145,6 +148,7 @@
             // button_ok_FindNumber_LinearSearch
             // 
             button_ok_FindNumber_LinearSearch.AutoSize = true;
+            button_ok_FindNumber_LinearSearch.Enabled = false;
             button_ok_FindNumber_LinearSearch.Image = (Image)resources.GetObject("button_ok_FindNumber_LinearSearch.Image");
             button_ok_FindNumber_LinearSearch.Location = new Point(286, 158);
             button_ok_FindNumber_LinearSearch.Name = "button_ok_FindNumber_LinearSearch";
@@ -156,6 +160,7 @@
             // lbl_find_Linear
             // 
             lbl_find_Linear.AutoSize = true;
+            lbl_find_Linear.BackColor = SystemColors.Window;
             lbl_find_Linear.Location = new Point(41, 162);
             lbl_find_Linear.Name = "lbl_find_Linear";
             lbl_find_Linear.Size = new Size(68, 20);
@@ -164,6 +169,7 @@
             // 
             // textBox_FindNumber_LinearSearch
             // 
+            textBox_FindNumber_LinearSearch.Enabled = false;
             textBox_FindNumber_LinearSearch.Location = new Point(115, 159);
             textBox_FindNumber_LinearSearch.Name = "textBox_FindNumber_LinearSearch";
             textBox_FindNumber_LinearSearch.Size = new Size(165, 27);
@@ -215,6 +221,7 @@
             // button_ok_FindNumber_HashTableSearch
             // 
             button_ok_FindNumber_HashTableSearch.AutoSize = true;
+            button_ok_FindNumber_HashTableSearch.Enabled = false;
             button_ok_FindNumber_HashTableSearch.Image = (Image)resources.GetObject("button_ok_FindNumber_HashTableSearch.Image");
             button_ok_FindNumber_HashTableSearch.Location = new Point(286, 402);
             button_ok_FindNumber_HashTableSearch.Name = "button_ok_FindNumber_HashTableSearch";
@@ -226,6 +233,7 @@
             // lbl_keyFind_HashTableSearch
             // 
             lbl_keyFind_HashTableSearch.AutoSize = true;
+            lbl_keyFind_HashTableSearch.BackColor = SystemColors.Window;
             lbl_keyFind_HashTableSearch.Location = new Point(41, 406);
             lbl_keyFind_HashTableSearch.Name = "lbl_keyFind_HashTableSearch";
             lbl_keyFind_HashTableSearch.Size = new Size(68, 20);
@@ -234,6 +242,7 @@
             // 
             // textBox_FindNumber_HashTableSearch
             // 
+            textBox_FindNumber_HashTableSearch.Enabled = false;
             textBox_FindNumber_HashTableSearch.Location = new Point(115, 403);
             textBox_FindNumber_HashTableSearch.Name = "textBox_FindNumber_HashTableSearch";
             textBox_FindNumber_HashTableSearch.Size = new Size(165, 27);
@@ -254,6 +263,7 @@
             // 
             // button_HashTableSearch
             // 
+            button_HashTableSearch.Enabled = false;
             button_HashTableSearch.Location = new Point(41, 446);
             button_HashTableSearch.Name = "button_HashTableSearch";
             button_HashTableSearch.Size = new Size(274, 45);
@@ -265,6 +275,7 @@
             // lbl_numsCount
             // 
             lbl_numsCount.AutoSize = true;
+            lbl_numsCount.BackColor = SystemColors.Window;
             lbl_numsCount.Location = new Point(41, 40);
             lbl_numsCount.Name = "lbl_numsCount";
             lbl_numsCount.Size = new Size(142, 20);
@@ -273,6 +284,7 @@
             // 
             // button_BinarySearch
             // 
+            button_BinarySearch.Enabled = false;
             button_BinarySearch.Location = new Point(41, 324);
             button_BinarySearch.Name = "button_BinarySearch";
             button_BinarySearch.Size = new Size(274, 45);
@@ -283,6 +295,7 @@
             // 
             // button_LinearSearch
             // 
+            button_LinearSearch.Enabled = false;
             button_LinearSearch.Location = new Point(41, 203);
             button_LinearSearch.Name = "button_LinearSearch";
             button_LinearSearch.Size = new Size(274, 45);

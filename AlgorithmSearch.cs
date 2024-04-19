@@ -47,6 +47,9 @@ namespace AlgorithmSearch
             Generate generate = new Generate(numbers, size_list);
 
             timer.Stop();
+
+            //  Увімкнення елементів керування пошуками
+            Component_Search_Controls_Enabled_To_True();
             
             //  Завантаження списку в поле "Список"
             richTextBox_List.Text = Print.InfoList(numbers);
@@ -214,6 +217,22 @@ namespace AlgorithmSearch
                 + Print.InfoLogSeparation();
             timing = 0;
             timer.Enabled = true;
+        }
+
+        //  Увімкнення елементів керування пошуками
+        private void Component_Search_Controls_Enabled_To_True()
+        {
+            textBox_FindNumber_LinearSearch.Enabled = true;
+            button_ok_FindNumber_LinearSearch.Enabled = true;
+            button_LinearSearch.Enabled = true;
+
+            textBox_FindNumber_BinarySearch.Enabled = true;
+            button_ok_FindNumber_BinarySearch.Enabled = true;
+            button_BinarySearch.Enabled = true;
+
+            textBox_FindNumber_HashTableSearch.Enabled = true;
+            button_ok_FindNumber_HashTableSearch.Enabled = true;
+            button_HashTableSearch.Enabled = true;
         }
 
         #endregion

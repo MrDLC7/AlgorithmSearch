@@ -52,7 +52,7 @@ namespace AlgorithmSearch
         }
 
         //  Сортування по хешкодам
-        public void SortNumbers(Numbers[] numbers)
+        private void SortNumbers(Numbers[] numbers)
         {
             Stopwatch stopwatch = new Stopwatch();
             stopwatch.Restart();

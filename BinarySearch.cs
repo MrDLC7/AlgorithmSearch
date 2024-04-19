@@ -54,7 +54,7 @@ namespace AlgorithmSearch
             _Time = stopwatch.ElapsedTicks / (Stopwatch.Frequency / (1000L * 1000L));
         }
 
-        public void SortNumbers(Numbers[] numbers)
+        private void SortNumbers(Numbers[] numbers)
         {
             Stopwatch stopwatch = new Stopwatch();
             stopwatch.Restart();

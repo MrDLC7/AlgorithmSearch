@@ -19,7 +19,7 @@ namespace AlgorithmSearch
         //  Виведення дій пошуку (Лог)
         static public string InfoLog(string name, string details, long time, string unit, string? result, long step)
         {
-            return $"{name}\nЧас пошуку: {time} {unit}.\nРезультат: {result}\nКількість кроків: {step}\n\n";
+            return $"\"{name}\"\nЧас пошуку: {time} {unit}.\nРезультат: {result}\nКількість кроків: {step}\n\n";
         }
 
         //  Очищення (Лог)

@@ -383,8 +383,6 @@
         private Label lbl_log;
         private Label lbl_list;
         private TextBox textBox_NumsCount;
-        public RichTextBox richTextBox_Log;
-        public RichTextBox richTextBox_List;
         private Button button_ok_FindNumber_LinearSearch;
         private Label lbl_find_Linear;
         private TextBox textBox_FindNumber_LinearSearch;
@@ -398,5 +396,7 @@
         private Button button_Clear_List;
         private Button button_Clear_Log;
         private System.Windows.Forms.Timer timer;
+        private RichTextBox richTextBox_Log;
+        private RichTextBox richTextBox_List;
     }
 }

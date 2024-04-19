@@ -21,16 +21,16 @@ namespace AlgorithmSearch
 
         #region Implementation 
 
-        int timing = 0;         //  Лічильник
+        int timing = 0;             //  Лічильник
 
         public struct Numbers
         {
-            public long value;
-            public int index;
-            public int hash;
+            public long value;      //  Номер
+            public int id;          //  Ідентифікатор
+            public int hash;        //  Хеш-код
         }
         Numbers[]? numbers;
-        long target = 0;        //  Ціль пошуку
+        long target = 0;            //  Ціль пошуку
 
         //  Створення списку
         private void button_Generate_Visible_List_Click(object sender, EventArgs e)

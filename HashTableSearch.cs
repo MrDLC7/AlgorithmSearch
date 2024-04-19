@@ -57,7 +57,7 @@ namespace AlgorithmSearch
             Stopwatch stopwatch = new Stopwatch();
             stopwatch.Restart();
 
-            Array.Sort(numbers, (a, b) => a.index.CompareTo(b.index));
+            Array.Sort(numbers, (a, b) => a.id.CompareTo(b.id));
             stopwatch.Stop();
             _Time_Sort = stopwatch.ElapsedTicks / (Stopwatch.Frequency / (1000L * 1000L));
         }

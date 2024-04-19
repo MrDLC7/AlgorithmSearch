@@ -46,7 +46,7 @@ namespace AlgorithmSearch
                 if (numbers[index].hash == -1)
                 {
                     numbers[index].value = value;
-                    numbers[index].index = index;
+                    numbers[index].id = index;
                     numbers[index].hash = hash;
                 }
                 else

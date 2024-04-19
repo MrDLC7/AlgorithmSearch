@@ -8,6 +8,8 @@ namespace AlgorithmSearch
 {
     internal class Print : AlgorithmSearch
     {
+        static private string separate = "----------------------------------------------------------";
+
         //  Загальне виведення дій (Лог)
         static public string InfoLog(string name, long time, string unit)
         {
@@ -30,10 +32,10 @@ namespace AlgorithmSearch
         static public string InfoList(Numbers[] nums)
         {
             string output = string.Empty;
-            output += "Номер\t\t\tХеш-код\n";
+            output += $"          Номер\t\t    Хеш-код\tId\n{separate}\n";
             foreach (var item in nums)
             {
-                output += $"+{item.value}\t\t{item.hash}\n";
+                output += $"+{item.value}\t\t{item.hash}\t{item.id}\n";
             }
             return output;
         }
@@ -47,8 +49,7 @@ namespace AlgorithmSearch
         //  Розділення "Лог" після кожної виконаної дії
         static public string InfoLogSeparation()
         {
-            string temp = "---------------------------------------------------------";
-            return $"\n{temp}\n{temp}\n\n";
+            return $"\n{separate}\n{separate}\n\n";
         }
     }
 }
